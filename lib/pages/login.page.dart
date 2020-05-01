@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:doglife/pages/reset-password.page.dart';
+// import 'package:doglife/pages/';
 
 class LoginPage extends StatelessWidget {
 
@@ -7,7 +9,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(//permite appbar e body, neste caso sem appbar
       body: Container(
         padding: EdgeInsets.only(//caso todos paddings fossem iguais, seria .all no lugar de .only
-          top: 60,
+          top: 30,
           left: 40,
           right: 40,
         ),
@@ -69,12 +71,12 @@ class LoginPage extends StatelessWidget {
                   // textAlign: TextAlign.right,
                 ),
                 onPressed: () {
-                  // Navigator.push( //não será usado pois não encaminha para lugar nenhum.
-                  //   context, 
-                  //   MaterialPageRoute(
-                  //     builder: (context) => ResetPasswordPage(), 
-                  //   ),
-                  // );
+                  Navigator.push( //Ao clicar, encaminha para outra página
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => ResetPasswordPage(), 
+                    ),
+                  );
                 },
               )
             ),
